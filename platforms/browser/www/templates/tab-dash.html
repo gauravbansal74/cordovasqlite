@@ -1,0 +1,21 @@
+<ion-view title="Dashboard">
+  <ion-content>
+    <div class="list">
+	  <label class="item item-input">
+	    <input type="text" placeholder="First Name" ng-model="firstname">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Last Name" ng-model="lastname">
+	  </label>
+	  <button class="button button-block button-positive" ng-click="insert();">
+		  Save in Mobile Memory
+		</button>
+
+		<button class="button button-block button-positive" ng-click="select();">
+		  Get Data from Mobile Memory
+		</button>
+	</div>
+	<div id="employeeList">
+	</div>
+  </ion-content>
+</ion-view>
