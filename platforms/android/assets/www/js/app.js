@@ -8,7 +8,7 @@
 var db = null;
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform, $cordovaSQLite) {
+.run(function($ionicPlatform, $cordovaSQLite, $cordovaNetwork, $ionicPopup) {
     $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,8 +19,11 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-     db = $cordovaSQLite.openDB({ name: "my123.db" });
-     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people (id integer primary key, firstname text, lastname text)");
+
+     
+
+     db = $cordovaSQLite.openDB({ name: "mobile.db" });
+     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS users (mobilenumber text)");
   });
 })
 
@@ -47,6 +50,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
         'tab-dash': {
           templateUrl: 'templates/tab-dash.html',
           controller: 'DashCtrl'
+         // controllerAs: 'dashCtrlt'
         }
       }
     })
