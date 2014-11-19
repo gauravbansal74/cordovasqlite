@@ -45,6 +45,18 @@ module.exports = [
         "file": "plugins/org.apache.cordova.network-information/src/browser/NetworkProxy.js",
         "id": "org.apache.cordova.network-information.NetworkProxy",
         "runs": true
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/src/browser/BarcodeScannerProxy.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScannerProxy",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -54,7 +66,8 @@ module.exports.metadata =
     "com.ionic.keyboard": "1.0.3",
     "org.apache.cordova.console": "0.2.11",
     "org.apache.cordova.device": "0.2.12",
-    "org.apache.cordova.network-information": "0.2.13"
+    "org.apache.cordova.network-information": "0.2.13",
+    "com.phonegap.plugins.barcodescanner": "2.0.1"
 }
 // BOTTOM OF METADATA
 });

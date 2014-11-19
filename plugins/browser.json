@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"browser-package\" value=\"BarcodeScanner\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -31,6 +35,9 @@
             "PACKAGE_NAME": "com.ionicframework.testapp290616"
         },
         "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.ionicframework.testapp290616"
+        },
+        "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.testapp290616"
         }
     },

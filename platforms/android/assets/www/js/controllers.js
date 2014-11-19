@@ -132,21 +132,16 @@ angular.module('starter.controllers', [])
                 }
 })
 
-.controller('FriendsCtrl', function($scope, $cordovaSQLite) {
-  var caseTableResult = [];
-  $scope.friends = function() {
-        var query = "SELECT firstname, lastname FROM people";
-        $cordovaSQLite.execute(db, query,[]).then(function(res) {
-            if(res.rows.length > 0) {
-                caseTableResult = res.rows;
-                return caseTableResult;
-            } else {
-                alert("No results found");
-            }
-        }, function (err) {
-            alert(err);
+.controller('FriendsCtrl', function($scope, $cordovaBarcodeScanner) {
+  $scope.scanBarcode = function() {
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            alert(imageData.text);
+            console.log("Barcode Format -> " + imageData.format);
+            console.log("Cancelled -> " + imageData.cancelled);
+        }, function(error) {
+            console.log("An error happened -> " + error);
         });
-    }
+    };
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {

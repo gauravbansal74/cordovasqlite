@@ -8,7 +8,7 @@
 var db = null;
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform, $cordovaSQLite, $cordovaNetwork, $ionicPopup) {
+.run(function($ionicPlatform, $cordovaSQLite, $cordovaNetwork, $ionicPopup, $cordovaBarcodeScanner) {
     $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
